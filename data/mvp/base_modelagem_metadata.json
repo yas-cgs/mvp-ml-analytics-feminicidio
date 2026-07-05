@@ -1,0 +1,36 @@
+{
+  "codigos_decisao_substantiva": [
+    219,
+    220,
+    221
+  ],
+  "prazo_dias": 730,
+  "registros_g1_antes_filtro_data": 30004,
+  "registros_g1_descartados_por_data_ajuizamento_invalida": 2211,
+  "registros_g1_antes_deduplicacao": 27793,
+  "processos_g1_unicos": 27516,
+  "duplicidades_removidas_por_numeroProcesso": 277,
+  "processos_com_decisao_substantiva": 7518,
+  "processos_censurados_excluidos": 10207,
+  "registros_modelagem": 17309,
+  "classe_0": 12696,
+  "classe_1": 4613,
+  "colunas_publicas": [
+    "tribunal",
+    "classe_codigo",
+    "sistema_nome",
+    "formato_nome",
+    "ano_ajuizamento",
+    "mes_ajuizamento",
+    "orgao_julgador_municipio_ibge",
+    "quantidade_assuntos",
+    "assunto_homicidio_qualificado",
+    "assunto_violencia_domestica_mulher",
+    "assunto_crime_tentado",
+    "assunto_ameaca",
+    "assunto_homicidio_simples",
+    "assunto_arma",
+    "assunto_medida_protetiva",
+    "decisao_substantiva_ate_730d"
+  ]
+}

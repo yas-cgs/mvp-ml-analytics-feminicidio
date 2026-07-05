@@ -1,0 +1,265 @@
+Contexto
+Neste trabalho, você deverá desenvolver um MVP individual de Machine Learning & Analytics em um notebook público no Google Colab. O objetivo é demonstrar domínio do fluxo essencial de um projeto de aprendizado de máquina: definição do problema, escolha e preparação dos dados, modelagem, avaliação dos resultados e discussão crítica da solução.
+
+O foco do trabalho não é necessariamente obter o melhor modelo possível, mas construir uma solução coerente, reproduzível, bem documentada e tecnicamente justificada. O template para o desenvolvimento do MVP pode ser encontrado aqui.
+
+1. Escolha da base de dados
+Escolha uma base de dados que não tenha sido utilizada nas aulas da sprint.
+
+Sugere-se utilizar bases disponibilizadas em repositórios como:
+
+UCI Machine Learning Repository: https://archive.ics.uci.edu/datasets;
+Kaggle: https://www.kaggle.com/datasets;
+Google Datasets: https://datasetsearch.research.google.com/;
+Hugging Face Datasets: https://huggingface.co/datasets;
+outros repositórios públicos de dados.
+Caso você prefira utilizar um dataset relacionado a um problema real da sua empresa ou área de atuação, isso também será permitido, desde que os dados possam ser usados sem violar regras de confidencialidade, privacidade ou propriedade da organização.
+
+O dataset deve ser carregado diretamente no notebook por meio de uma URL pública ou biblioteca de acesso público, de forma que o notebook possa ser executado pelo professor do início ao fim, sem necessidade de upload manual, login, token, chave de API ou configuração local. 
+
+2. Definição do problema
+Você deverá escolher e resolver um problema principal de aprendizado de máquina, que pode ser de:
+
+classificação;
+regressão;
+clusterização;
+previsão de séries temporais;
+outro tipo de problema de ML, desde que seja bem justificado.
+O problema pode estar em diferentes áreas de aplicação, como dados tabulares, sensores, dados temporais, NLP, visão computacional ou outros domínios.
+
+No início do notebook, você deverá explicar:
+
+qual é o problema escolhido;
+qual é o objetivo do modelo;
+qual variável será prevista ou analisada, quando aplicável;
+por que esse problema pode ser tratado como um problema de Machine Learning;
+quais são as principais premissas, hipóteses ou restrições envolvidas.
+3. Estrutura esperada do notebook
+O notebook deve funcionar como um relatório técnico executável, combinando código, resultados, visualizações e explicações textuais.
+
+Recomenda-se seguir a estrutura do template fornecido, adaptando-a quando necessário ao tipo de problema escolhido.
+
+3.1. Apresentação do problema
+Nesta seção, descreva o contexto do problema, o objetivo do MVP e o tipo de tarefa de Machine Learning que será realizada.
+
+Você deve deixar claro, por exemplo, se o problema é de classificação, regressão, clusterização ou previsão de séries temporais.
+
+3.2. Apresentação dos dados
+Nesta seção, apresente o dataset utilizado.
+
+Inclua, quando aplicável:
+
+fonte dos dados;
+quantidade de registros;
+quantidade de atributos;
+descrição das principais variáveis;
+identificação da variável-alvo, quando houver;
+possíveis limitações do dataset;
+critérios usados para escolher essa base.
+3.3. Análise exploratória inicial
+Realize uma análise exploratória suficiente para compreender os dados antes da modelagem.
+
+Inclua, quando aplicável:
+
+visualização das primeiras linhas;
+tipos das variáveis;
+estatísticas descritivas;
+verificação de valores ausentes;
+distribuição da variável-alvo;
+análise de desbalanceamento, quando for classificação;
+gráficos ou tabelas que ajudem a entender o problema.
+Essa etapa não precisa repetir todo o MVP da sprint de Análise de Dados e Boas Práticas, mas pode reaproveitar parte dele quando fizer sentido.
+
+3.4. Preparação dos dados
+Realize as operações necessárias para preparar os dados para os modelos.
+
+Inclua, quando aplicável:
+
+tratamento de valores ausentes;
+tratamento de outliers;
+codificação de variáveis categóricas;
+normalização ou padronização;
+transformação de textos, imagens ou séries temporais;
+engenharia de atributos;
+seleção ou remoção de atributos;
+criação de pipelines reproduzíveis.
+Explique as decisões tomadas. Não basta aplicar uma transformação; é importante justificar por que ela faz sentido para o problema e para os modelos escolhidos.
+
+3.5. Divisão dos dados
+Separe os dados de forma adequada ao tipo de problema.
+
+Para problemas supervisionados, utilize divisão entre treino e teste e, quando necessário, validação. Para séries temporais, respeite a ordem temporal dos dados. Para clusterização, explique como a avaliação será conduzida, já que pode não haver uma variável-alvo.
+
+Sempre que possível, evite vazamento de dados. Transformações como normalização, imputação, seleção de atributos e codificação devem ser ajustadas apenas com os dados de treino quando isso se aplicar.
+
+Caso opte por usar validação cruzada, explique sua escolha. Caso não utilize, justifique por que ela não foi necessária ou adequada ao problema.
+
+4. Modelagem e treinamento
+Nesta etapa, você deverá treinar e comparar modelos para resolver o problema escolhido.
+
+O MVP deve conter, no mínimo:
+
+um modelo baseline simples;
+pelo menos duas abordagens/modelos candidatos, ou duas variações justificadas de uma mesma família de modelos (além dos modelos que já estão presentes no template!);
+comparação entre os resultados obtidos;
+justificativa para a escolha dos modelos.
+O baseline pode ser um modelo simples, uma regra ingênua ou uma abordagem inicial que sirva como referência. O objetivo é permitir avaliar se os modelos mais elaborados realmente trouxeram ganho.
+
+Quando possível, utilize pipelines para organizar o fluxo de pré-processamento e treinamento.
+
+Métodos mais avançados, como Deep Learning, fine-tuning de modelos pré-treinados ou ensembles, podem ser utilizados, mas não são obrigatórios. Eles devem ser usados apenas quando fizerem sentido para o problema e quando forem devidamente explicados.
+
+5. Otimização de hiperparâmetros
+Você deverá realizar algum tipo de ajuste de hiperparâmetros em pelo menos um dos modelos, desde que isso seja aplicável ao problema escolhido.
+
+A otimização não precisa ser extensa, mas deve ser justificada. Por exemplo, você pode usar:
+
+busca manual simples;
+Grid Search;
+Random Search;
+validação cruzada;
+outra estratégia compatível com o problema.
+Explique:
+
+quais hiperparâmetros foram ajustados;
+por que esses hiperparâmetros foram escolhidos;
+qual critério foi usado para selecionar a melhor configuração;
+se houve melhora em relação ao modelo sem ajuste.
+6. Avaliação dos resultados
+Avalie os modelos utilizando métricas adequadas ao tipo de problema.
+
+Exemplos:
+
+classificação: acurácia, precisão, recall, F1-score, matriz de confusão, AUC, quando aplicável;
+regressão: MAE, MSE, RMSE, R², MAPE, quando aplicável;
+clusterização: silhouette score, Davies-Bouldin, análise visual dos grupos ou interpretação dos clusters;
+séries temporais: MAE, RMSE, MAPE, comparação com baseline temporal, análise de erro ao longo do tempo.
+Você deverá:
+
+justificar as métricas escolhidas;
+comparar os modelos treinados;
+avaliar o desempenho em dados não vistos;
+discutir sinais de overfitting ou underfitting;
+analisar limitações dos resultados;
+indicar possíveis melhorias futuras.
+
+
+7. Conclusão do MVP
+Ao final do notebook, escreva uma conclusão textual resumindo:
+
+o problema abordado;
+o dataset utilizado;
+os principais tratamentos realizados;
+os modelos avaliados;
+o melhor resultado encontrado;
+a justificativa para a escolha da melhor solução;
+limitações do MVP;
+possíveis próximos passos.
+Essa conclusão é importante para fechar a narrativa do trabalho. O notebook deve contar uma história completa, do problema inicial até a análise final dos resultados.
+
+8. Boas práticas esperadas
+O notebook deve seguir boas práticas de organização, documentação e reprodutibilidade.
+
+Espera-se que você:
+
+fixe seeds quando aplicável;
+organize o código em células claras;
+use nomes de variáveis compreensíveis;
+evite repetição desnecessária de código;
+crie funções quando isso melhorar a organização;
+documente decisões importantes em células de texto;
+informe bibliotecas utilizadas;
+relate, quando possível, tempo de treino e recursos computacionais usados;
+garanta que o notebook rode do início ao fim sem erros.
+Não é obrigatório criar classes no código. O mais importante é que o código esteja limpo, legível e organizado.
+
+9. Entrega
+A entrega final deverá ser um notebook público no Google Colab.
+
+Embora você possa desenvolver o código em outra IDE, a versão entregue deverá estar no Colab e ser executável do início ao fim.
+
+O notebook deverá conter:
+
+código em Python;
+explicações textuais em células Markdown;
+tabelas, gráficos e métricas quando necessários;
+conclusão final;
+respostas às perguntas do checklist, considerando apenas o que for aplicável ao dataset e ao problema escolhido.
+10. Requisitos e composição da nota
+A avaliação seguirá os seguintes critérios:
+
+(1,0 pt) Execução sem erros
+O notebook deve poder ser executado pelo professor do início ao fim, sem erros e sem necessidade de configuração manual.
+
+(2,0 pts) Documentação consistente
+O notebook deve utilizar blocos de texto para explicar cada etapa, cada decisão relevante e os resultados obtidos, contando uma história completa e compreensível.
+
+(1,0 pt) Código limpo
+O código deve estar legível, organizado e seguir boas práticas de programação em Python. Não é obrigatório utilizar classes.
+
+(2,0 pts) Análise dos resultados do modelo
+O trabalho deve apresentar uma análise dos principais resultados, comparação entre modelos, discussão sobre limitações, possíveis problemas de overfitting/underfitting e oportunidades de melhoria.
+
+(2,0 pts) Checklist do MVP
+O notebook deve responder às perguntas aplicáveis do checklist, utilizando-o como guia para o desenvolvimento do trabalho. Caso alguma pergunta não se aplique ao problema escolhido, isso deve ser indicado e justificado.
+
+(2,0 pts) Capricho e qualidade geral do trabalho
+Serão considerados a organização geral do notebook, clareza da apresentação, coerência das decisões, qualidade das visualizações, completude da análise e cuidado na entrega final.
+
+Checklist sugerido
+Use as perguntas abaixo como guia para construir e revisar seu notebook.
+
+Definição do problema
+Qual é a descrição do problema?
+Qual é o objetivo do modelo?
+O problema é de classificação, regressão, clusterização, previsão de séries temporais ou outro tipo?
+Por que esse problema pode ser resolvido com Machine Learning?
+Você tem premissas ou hipóteses sobre o problema? Quais?
+Que restrições ou condições foram consideradas na escolha dos dados?
+Descrição dos dados
+Qual dataset foi utilizado?
+Qual é a fonte dos dados?
+Como os dados foram carregados no notebook?
+Quantos registros e atributos existem?
+Quais são os principais atributos?
+Existe variável-alvo? Se sim, qual?
+Há limitações conhecidas no dataset?
+Preparação dos dados
+Houve valores ausentes? Como foram tratados?
+Houve necessidade de remover ou transformar atributos?
+Foram criados novos atributos?
+Foram aplicadas normalização, padronização, codificação ou outras transformações?
+Houve preocupação com vazamento de dados?
+As transformações foram aplicadas de forma adequada à divisão treino/teste?
+Divisão dos dados
+Como os dados foram separados?
+Foi usada divisão treino/teste?
+Foi usada validação ou validação cruzada?
+A estratégia de divisão é adequada para o tipo de problema?
+No caso de séries temporais, a ordem temporal foi respeitada?
+No caso de clusterização, como a avaliação foi planejada?
+Modelagem
+Qual foi o baseline utilizado?
+Quais modelos foram treinados?
+Por que esses modelos foram escolhidos?
+Os modelos foram comparados de forma justa?
+Foi observado algum indício de underfitting?
+Algum modelo apresentou sinais de overfitting?
+Otimização
+Algum modelo teve hiperparâmetros ajustados?
+Quais hiperparâmetros foram escolhidos?
+Qual estratégia de busca foi usada?
+O ajuste trouxe melhora em relação à versão inicial?
+A otimização foi feita sem usar indevidamente os dados de teste?
+Avaliação
+Quais métricas foram utilizadas?
+Por que essas métricas são adequadas?
+Qual modelo teve melhor desempenho?
+Os resultados fazem sentido para o problema?
+Houve análise de erros?
+Quais são as principais limitações da solução?
+Conclusão
+Qual foi a melhor solução encontrada?
+Por que ela foi escolhida?
+O MVP cumpriu o objetivo definido no início?
+Quais seriam os próximos passos para melhorar o projeto?
